@@ -12,7 +12,12 @@
 <title>Lista de empresa</title>
 </head>
 <body>
-    Lista de empresas: <br />
+	<c:if test="${not empty empresa}">	
+		<p> Empresa ${ empresa } cadastrada </p>	
+	</c:if>    
+    <br />
+    Lista de empresas: 
+    <br />
 
 	<ul>
 		<c:forEach items="${empresas}" var="empresa">
